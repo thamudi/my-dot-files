@@ -1,0 +1,37 @@
+# Package list for my custom arch
+# Useful commands
+# * Get manually installed packages:
+#   $ comm <(pacman -Qettq | sort) <(pacman -Qgq base-devel | sort) -23
+# * Show manually installed packages not in this list
+#   $ comm <(cat arch-pkglist.txt | grep -v '^#' | sort) <(comm <(pacman -Qettq | sort) <(pacman -Qgq base-devel | sort) -23) -13
+# * Install all packages (you need yay installed)
+#   $ yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
+
+# BASE
+base
+base-devel
+dash
+efibootmgr
+grub
+linux
+linux-firmware
+
+# ZSH & TERMINAL
+bat
+bottom
+lsd
+man-db
+mlocate
+vim
+xclip
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k
+
+# ========== #
+#    AUR     #
+# ========== #
+
+nerd-fonts-fira-code
+flat-remix
