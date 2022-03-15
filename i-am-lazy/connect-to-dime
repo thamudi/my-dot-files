@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# I use this script to connect to my bluetooth headset directly, used with a keyboard shortcut
+
+bluetoothctl connect 60:C5:E6:26:E2:18

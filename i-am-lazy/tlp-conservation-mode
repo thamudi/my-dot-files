@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# I use this script to turn on/ off conservation mode for my legion 
+# parameter options are 0 for off, 1 for onn
+
+# TODO show a help page for this
+
+# Note: Must run command in sudo
+
+echo $1 | sudo tee -a /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+
+tlp-stat -b

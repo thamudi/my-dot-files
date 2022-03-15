@@ -48,11 +48,12 @@ alias cp='cp -v'
 alias rm='rm -I'
 alias mv='mv -iv'
 alias ln='ln -sriv'
+alias xclip='xclip -selection c'
+alias cpcb='pwd | xclip -selection clipboard'
 command -v vim > /dev/null && alias vi='vim'
 
 ### Colorize commands
 alias ls='ls --color=auto'
-alias l='ls --color=auto -la'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
