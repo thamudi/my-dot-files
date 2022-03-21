@@ -26,7 +26,7 @@ As for vimrc you will need PlugInstall installed
 ```bash
 yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
 ```
-**Step 2: Copy/ Move the contents from the [./dotfiles](.dotfiles/)**
+**Step 2: Copy/ Move the contents from the [./dotfiles](./dotfiles/)**
 
 - Make sure they are placed into your `$HOME` dir or `~`
 
