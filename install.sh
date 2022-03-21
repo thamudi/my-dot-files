@@ -21,19 +21,15 @@ echo "====================================="
 
 cp -r ./dotfiles/{.,} ~ 
 
+source ~/.zshrc # source the zshrce files
 
-read -p "Do you want to source and install vim plugins (y/n)? " answer
-case ${answer:0:1} in
-    y|Y )
-        echo 'sourcing zshrc and installing plugins for vimrc'
-				source ~/.zshrc
-				echo 'done'
-				echo 'PlugInstall | vim'
-    ;;
-    * )
-        echo 'Skipping ...'
-    		echo 'Make sure to source zshrc and run PlugInstall in vim after this for the changes to take effect'
-		;;
-esac
+# git the vim plug installed 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+echo 'PlugInstall | vim' # install the vim plugins 
+
+
 
 echo 'Done!'

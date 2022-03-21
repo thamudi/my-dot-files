@@ -17,24 +17,31 @@ As for vimrc you will need PlugInstall installed
 
 ### Manual
 
-### zshrc
+#### zshrc
 
-To install the required packages to use `.zshrc` run the following command
+**Step 1: Make sure you have installed the dependencies that are mentioned in the [./arch-pkglist.txt](./arch-pkglist.txt)** 
+
+- To install the required packages run the following command
 
 ```bash
 yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
 ```
+**Step 2: Copy/ Move the contents from the [./dotfiles](.dotfiles/)**
 
-Move or copy the content from [./dotfiles] into your $HOME dir
+- Make sure they are placed into your `$HOME` dir or `~`
 
-If everything was correct you should be able to source `.zshrc` without any errors.
+**Step 3: Srouce the .zshrc file**
+
+```bash
+source .zshrc
+```
 
 You should have everything running perfectly 
 
 NOTE: You can re-configure the look and feel of your z-shell by running `p10k configure`
 in your terminal.
 
-### vim
+#### vim
 
 In order to work with my `.vimrc` you will need to have vim-plugins installed
 Here's are the steps 
@@ -50,6 +57,21 @@ If you followed the previous step you should have moved it with the .zshrc, if n
 
 **Step 3: Open vim in your terminal and run the following command**
 
-```
+```bash
 :PlugInstall
 ```
+___
+
+### Automatice (Recommended)
+
+**Step 1: Make the install.sh executable**
+```bash
+chmod +x install.sh
+```
+
+**Step 2: run the install.sh**
+```bash
+./install.sh
+```
+
+**Step 3: profit!**
