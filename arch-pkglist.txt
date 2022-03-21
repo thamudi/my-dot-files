@@ -7,20 +7,9 @@
 # * Install all packages (you need yay installed)
 #   $ yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
 
-# BASE
-base
-base-devel
-dash
-efibootmgr
-grub
-linux
-linux-firmware
-
 # ZSH & TERMINAL
 bat
-bottom
 lsd
-man-db
 mlocate
 vim
 xclip
@@ -33,5 +22,5 @@ zsh-theme-powerlevel10k
 #    AUR     #
 # ========== #
 
-nerd-fonts-fira-code
-flat-remix
+# nerd-fonts-fira-code
+# flat-remix

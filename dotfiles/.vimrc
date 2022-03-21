@@ -46,7 +46,7 @@ nnoremap <C-~> :terminal<CR>
 
 " Nerd Tree Config
 nmap <C-n> :NERDTreeToggle<CR>
-
+let g:NERDTreeIgnore = ['^node_modules$']
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
