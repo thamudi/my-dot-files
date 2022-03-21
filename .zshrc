@@ -50,6 +50,8 @@ alias mv='mv -iv'
 alias ln='ln -sriv'
 alias xclip='xclip -selection c'
 alias cpcb='pwd | xclip -selection clipboard'
+alias rs='kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell'
+alias waylandelectron='electron --enable-features=UseOzonePlatform --ozone-platform=wayland'
 command -v vim > /dev/null && alias vi='vim'
 
 ### Colorize commands
