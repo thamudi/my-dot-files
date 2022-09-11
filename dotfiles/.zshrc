@@ -103,6 +103,15 @@ find() {
 	fi
 }
 
+####################################
+## function to cleanup local deleted
+## branchs from remote
+###################################
+
+cleanup-git-branches(){
+  git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+}
+
 ###################################
 ###### POWERLINK CONFIG ######
 ###################################
