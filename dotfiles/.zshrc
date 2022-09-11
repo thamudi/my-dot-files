@@ -18,24 +18,8 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-###################################
-# The following fix is is used to run react app in brave when using react scripts
-# Change the default browser to brace instead of firefox
-###################################
-export BROWSER=/usr/bin/brave
-
 # source init-nvm.sh on device start
 source /usr/share/nvm/init-nvm.sh
-
-###################################
-###### ANDROID STUDIO CONFIG ######
-###################################
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ###################################
 ###### ALIASES ######
@@ -82,16 +66,6 @@ command -v bat > /dev/null && \
 ### TOP
 command -v bashtop > /dev/null && alias top='bashtop'
 
-###################################
-###### MAN PAGES COLORING ######
-###################################
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 ###################################
 ###### CUSTOM FUNCTIONS ######
