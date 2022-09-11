@@ -28,8 +28,6 @@ Plug 'Shougo/defx.nvim' " used for reading dir
 Plug 'roxma/nvim-yarp' " dependency 
 Plug 'roxma/vim-hug-neovim-rpc' " dependency
 Plug 'ryanoasis/vim-devicons'
-Plug 'SirVer/ultisnips' " Dependency for vim react snippets 
-Plug 'mlaursen/vim-react-snippets' " JS & TS snippets for developing React
 Plug 'junegunn/vim-emoji'
 Plug 'scrooloose/nerdcommenter'
 
@@ -51,6 +49,14 @@ nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
 
+" Ale auto fix on save
+"let g:ale_fixers = {
+ "\ 'javascript': ['eslint']
+ "\ }
+"let g:ale_sign_error = '❌'
+"let g:ale_sign_warning = '⚠️'
+"let g:ale_fix_on_save = 1
+
 let g:neosolarized_termtrans=1
 set background=dark
 colorscheme NeoSolarized
@@ -59,6 +65,7 @@ colorscheme NeoSolarized
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeIgnore = ['^node_modules$']
 map <leader>r :NERDTreeFind<cr>
+autocmd BufEnter NERD_tree_* | execute 'normal R'
 " NERD COMMENT POWER!
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
@@ -84,6 +91,11 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ ]
+
+" Util snippets config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
