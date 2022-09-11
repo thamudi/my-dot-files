@@ -25,7 +25,7 @@ source /usr/share/nvm/init-nvm.sh
 ###### ALIASES ######
 ###################################
 
-alias neofetch='neofetch --ascii_distro archlinux'
+alias neofetch='neofetch --ascii_distro manjaro'
 
 #alias ..='cd ..'
 alias cp='cp -v'
